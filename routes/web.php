@@ -7,7 +7,6 @@ use App\Http\Controllers\Admin\ItemController as AdminItemController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\Staff\AuctionController as StaffAuctionController;
-use App\Http\Controllers\HomeController;
 
 
 /*
@@ -20,14 +19,6 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dash', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/auction/{id}', [FrontendController::class, 'detail'])->name('detail');
@@ -61,3 +52,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/dash', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');

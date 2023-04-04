@@ -1,6 +1,3 @@
-@php
-// dd($auctionsEnd);
-@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,7 +117,6 @@
                 show details </a>
             </div>
           </div>
-
           @endforeach
         </div>
       </div>
